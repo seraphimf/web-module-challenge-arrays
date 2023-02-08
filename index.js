@@ -65,9 +65,9 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 function is31Flavors(originalFlavors){
   if (originalFlavors.length === 31) {
-    return "True"
+    return true
   } else {
-    return "False"
+    return false
   }
 }
 
@@ -128,7 +128,7 @@ Use the getFlavorByIndex function below to do the following:
 
 
 function getFlavorByIndex(originalFlavors){
-  return originalFlavors[1];
+  return originalFlavors[2];
 }
 console.log(getFlavorByIndex(originalFlavors));
 
@@ -147,10 +147,15 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(originalFlavors){
+for(let i = 0; i < originalFlavors.length; i++){
+  if(originalFlavors[i] === "Rocky Road"){
+    originalFlavors.splice(i, 1);
+  }
 }
-
+return originalFlavors;
+}
+console.log(removeFlavorByName(originalFlavors, "Rocky Road"));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -172,10 +177,18 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(originalFlavors){
+  let filteredFlavors = [];
+  for(let i = 0; i < originalFlavors.length; i++){
+    if(originalFlavors[i].includes("Chocolate")){
+      filteredFlavors.push(originalFlavors[i]);
+    }
+  }
+  return filteredFlavors;
 }
 
+  
+console.log(filterByWord(originalFlavors, "Chocolate"));
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
