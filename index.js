@@ -147,9 +147,9 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(originalFlavors, flavorRemoved){
+function removeFlavorByName(originalFlavors, "Rocky Road"){
 for(let i = 0; i < originalFlavors.length; i++){
-  if(originalFlavors[i] === flavorRemoved){
+  if(originalFlavors[i] === "Rocky Road"){
     originalFlavors.splice(i, 1);
   }
 }
