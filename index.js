@@ -147,9 +147,9 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(originalFlavors, "Rocky Road"){
+function removeFlavorByName(originalFlavors, flavorRemoved){
 for(let i = 0; i < originalFlavors.length; i++){
-  if(originalFlavors[i] === "Rocky Road"){
+  if(originalFlavors[i] === flavorRemoved){
     originalFlavors.splice(i, 1);
   }
 }
@@ -177,10 +177,10 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(originalFlavors){
+function filterByWord(originalFlavors, filteredFlavor){
   let filteredFlavors = [];
   for(let i = 0; i < originalFlavors.length; i++){
-    if(originalFlavors[i].includes("Chocolate")){
+    if(originalFlavors[i].includes(filteredFlavor)){
       filteredFlavors.push(originalFlavors[i]);
     }
   }
